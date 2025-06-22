@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudo das 5 Propriedades do Position</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      height: 2000px; /* Para testar o fixed e sticky */
+    }
+
+    .explicacao {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .caixa {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      border: 2px solid #0077cc;
+      margin-bottom: 20px;
+    }
+
+    /* 1. Static (padrão) */
+    .static {
+      position: static;
+    }
+
+    /* 2. Relative */
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      background-color: lightgreen;
+    }
+
+    /* 3. Absolute */
+    .absolute-wrapper {
+      position: relative; /* contexto para absolute */
+      height: 200px;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      background-color: salmon;
+    }
+
+    /* 4. Fixed */
+    .fixed {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: gold;
+      z-index: 1000;
+    }
+
+    /* 5. Sticky */
+    .sticky {
+      position: sticky;
+      top: 0;
+      background-color: violet;
+      z-index: 500;
+    }
+
+    /* Utilitário para mostrar sticky */
+    .grande {
+      height: 800px;
+      background: linear-gradient(white, gray);
+      padding-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Estudo das Propriedades do Position</h1>
+
+  <p class="explicacao">
+    Este exemplo mostra as 5 propriedades possíveis de <code>position</code> no CSS:
+    <strong>static</strong>, <strong>relative</strong>, <strong>absolute</strong>,
+    <strong>fixed</strong> e <strong>sticky</strong>.
+  </p>
+
+  <h2>1. Position: static (padrão)</h2>
+  <div class="caixa static">Caixa com position: static</div>
+
+  <h2>2. Position: relative</h2>
+  <div class="caixa relative">Caixa com position: relative<br>(top: 20px, left: 20px)</div>
+
+  <h2>3. Position: absolute</h2>
+  <div class="absolute-wrapper">
+    <div class="caixa absolute">Caixa com position: absolute<br>(top: 30px, left: 30px)</div>
+  </div>
+
+  <h2>4. Position: fixed</h2>
+  <div class="caixa fixed">Caixa fixa<br>(sempre visível no canto direito)</div>
+
+  <h2>5. Position: sticky</h2>
+  <div class="caixa sticky">Caixa sticky (gruda ao rolar)</div>
+
+  <div class="grande">
+    Role a página para ver o comportamento de <strong>fixed</strong> e <strong>sticky</strong>.
+  </div>
+
+</body>
+</html>
