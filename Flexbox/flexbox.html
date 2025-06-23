@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Guia Completo Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      color: #2b78e4;
+      margin-top: 40px;
+    }
+
+    .caixa {
+      border: 2px dashed #ccc;
+      padding: 15px;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      border: 1px solid #ddd;
+      padding: 10px;
+      min-height: 100px;
+      margin-top: 10px;
+    }
+
+    .item {
+      background-color: #2b78e4;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin: 5px;
+      border-radius: 8px;
+    }
+
+    .vertical {
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+
+    .nowrap {
+      flex-wrap: nowrap;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-space-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+      height: 200px;
+    }
+
+    .align-end {
+      align-items: flex-end;
+    }
+
+    .align-content-center {
+      flex-wrap: wrap;
+      align-content: center;
+      height: 250px;
+    }
+
+    .gap-container {
+      gap: 20px;
+    }
+
+    .grow1 {
+      flex-grow: 1;
+    }
+
+    .shrink0 {
+      flex-shrink: 0;
+      width: 200px;
+    }
+
+    .basis-auto {
+      flex-basis: auto;
+    }
+
+    .order1 {
+      order: 1;
+    }
+
+    .order2 {
+      order: 2;
+    }
+
+    .order-1 {
+      order: -1;
+    }
+
+    .align-self-end {
+      align-self: flex-end;
+    }
+
+    .exemplo-pequeno {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guia Completo de Flexbox com Exemplos</h1>
+
+  <div class="caixa">
+    <h2>display: flex</h2>
+    <p>Transforma o container em flex container.</p>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-direction</h2>
+    <p>Define a direção dos itens (linha ou coluna).</p>
+    <div class="container vertical">
+      <div class="item">Coluna 1</div>
+      <div class="item">Coluna 2</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-wrap</h2>
+    <p>Permite que os itens quebrem linha.</p>
+    <div class="container wrap">
+      <div class="item exemplo-pequeno">A</div>
+      <div class="item exemplo-pequeno">B</div>
+      <div class="item exemplo-pequeno">C</div>
+      <div class="item exemplo-pequeno">D</div>
+      <div class="item exemplo-pequeno">E</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-direction + flex-wrap</h2>
+    <p>Direção em linha + quebra de linha.</p>
+    <div class="container wrap" style="flex-direction: row;">
+      <div class="item exemplo-pequeno">1</div>
+      <div class="item exemplo-pequeno">2</div>
+      <div class="item exemplo-pequeno">3</div>
+      <div class="item exemplo-pequeno">4</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>justify-content</h2>
+    <p>Alinha no eixo principal (horizontal por padrão).</p>
+    <div class="container justify-space-between">
+      <div class="item">Esquerda</div>
+      <div class="item">Centro</div>
+      <div class="item">Direita</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>align-items</h2>
+    <p>Alinha no eixo cruzado (vertical).</p>
+    <div class="container align-center">
+      <div class="item">Topo</div>
+      <div class="item" style="height: 80px;">Alto</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>align-content</h2>
+    <p>Alinha as linhas dentro do container.</p>
+    <div class="container align-content-center">
+      <div class="item exemplo-pequeno">1</div>
+      <div class="item exemplo-pequeno">2</div>
+      <div class="item exemplo-pequeno">3</div>
+      <div class="item exemplo-pequeno">4</div>
+      <div class="item exemplo-pequeno">5</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>gap</h2>
+    <p>Define o espaço entre os itens.</p>
+    <div class="container gap-container">
+      <div class="item">Gap</div>
+      <div class="item">de</div>
+      <div class="item">20px</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>order</h2>
+    <p>Controla a ordem visual dos itens.</p>
+    <div class="container">
+      <div class="item order2">Ordem 2</div>
+      <div class="item order-1">Ordem -1</div>
+      <div class="item order1">Ordem 1</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-grow</h2>
+    <p>Define se o item pode crescer. Quanto maior o valor, mais ele cresce.</p>
+    <div class="container">
+      <div class="item grow1">Cresce</div>
+      <div class="item">Fixo</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-shrink</h2>
+    <p>Define se o item pode encolher.</p>
+    <div class="container" style="width: 300px;">
+      <div class="item shrink0">Não encolhe</div>
+      <div class="item">Normal</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex-basis</h2>
+    <p>Define o tamanho inicial antes de crescer ou encolher.</p>
+    <div class="container">
+      <div class="item" style="flex-basis: 200px;">200px</div>
+      <div class="item">Auto</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>flex (shorthand)</h2>
+    <p>Combinação de grow, shrink e basis.</p>
+    <div class="container">
+      <div class="item" style="flex: 2 1 0%;">2 1 0%</div>
+      <div class="item" style="flex: 1 1 0%;">1 1 0%</div>
+    </div>
+  </div>
+
+  <div class="caixa">
+    <h2>align-self</h2>
+    <p>Sobrescreve o align-items para um item específico.</p>
+    <div class="container align-end" style="height: 150px;">
+      <div class="item">Normal</div>
+      <div class="item align-self-end">Base</div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 50px; text-align: center;">
+    <p>Guia Flexbox finalizado ✅ — Experimente modificar os estilos para testar!</p>
+  </footer>
+</body>
+</html>

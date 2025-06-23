@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, sans-serif ;
+    background-color: #F9F9F9;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1.5rem;
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+/* Esquerda */
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Centro */
+.search-box {
+  display: flex;  
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  border: none;
+
+}
+
+.search-icon {
+    border: none;
+    border-left: 1px solid #ccc;
+    height: 100%;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+/* Direita */
+.right-header {
+  display: flex;
+  align-items: center;
+  
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+input [type="text"]{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.video-area{
+    display: flex;
+    gap: 30px;
+}
+
+.video-frame{
+    flex: 3;
+}
+
+.video-simulacao{
+    background-color: #000;
+    color: #fff;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.video-simulacao h2{
+font-size: 0.5rem;
+
+}
+
+.acoes{
+    display: flex;
+    gap: 2rem;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.button01{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.subscribe{
+    background-color: red;
+    border: none;
+    padding: 0.7rem 2rem;
+}
+
+.subscribe01{
+    color: #fff;
+    text-decoration: none;
+}
+
+.channel-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.channel-box h5{
+    font-weight: bold;
+}
+
+.viwer{
+padding: 1.5rem 0;
+}
+
+.tumbnail{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    width: fit-content;
+}
+
+.tumbnail-info{
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+
